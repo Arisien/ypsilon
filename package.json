@@ -1,0 +1,24 @@
+{
+  "name": "ypsilon",
+  "version": "1.0.0",
+  "description": "chat client",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arisien/ypsilon.git"
+  },
+  "keywords": [
+    "chat",
+    "client",
+    "p2p"
+  ],
+  "author": "Arisien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arisien/ypsilon/issues"
+  },
+  "homepage": "https://github.com/Arisien/ypsilon#readme"
+}
