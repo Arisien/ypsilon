@@ -1,0 +1,43 @@
+{
+    "35m": [
+        "if",
+        "else",
+        "switch",
+        "case",
+        "default",
+        "break",
+        "continue",
+        
+        "for",
+        "while",
+        "do",
+        "goto",
+
+        "return"
+    ],
+
+    "44m": [
+        "struct",
+        "enum",
+        "union",
+        "typedef",
+        
+        "int",
+        "float",
+        "char",
+        "double",
+        "long",
+        "short",
+        "auto",
+        "void",
+
+        "const",
+        "static",
+        "signed",
+        "unsigned",
+        "register",
+        "volatile",
+
+        "sizeof"
+    ]
+}
