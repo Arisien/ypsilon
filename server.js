@@ -1,21 +1,26 @@
+/* Node Modules */
 const net = require('net');
 
-const format = require('./format');
+/* Ypsilon Modules */
+const parser = require('./parser');
+const io = require('./io');
 
 class Server {
-    constructor (port) {
+    constructor (config) {
         this.clients = {};
-        this.port = port;
+        this.config = config;
     }
 
     launch = () => {
-        this.server = net.createServer((connection) => {
-            const ip = connection.remoteAddress;
-            this.clients[ip] = {ip:ip, socket:connection};
-            connection.on('data', this.data);
+        this.server = net.createServer((socket) => {
+            const ip = socket.remoteAddress;
+            this.clients[ip] = {ip:ip, socket:socket};
+            socket.on('data', this.data);
+            socket.write(parser.asciify(config.message));
         });
 
-        this.server.listen(this.port);
+        this.server.listen(this.config.port);
+        
     }
 
     data = (data) => {
@@ -23,9 +28,6 @@ class Server {
     }
 }
 
-
-// const port = 25565;
-// const clients = [];
 
 // const server = net.createServer((connection) => {
 //     const ip = connection.remoteAddress;
